@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="{{ box }}"><div style="{{ body }}"><div style="{{ foot }}"></div><div style="{{ band }}"></div></div><sc-if value="{{ dims }}" hint-placeholder-val="{{ false }}"><div style="{{ line }}"><span style="{{ tickL }}"></span><span style="{{ tickR }}"></span></div><div style="{{ labels }}"><span>{{ lenText }}</span><span>{{ ringText }}</span></div></sc-if></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;420px&quot;,&quot;height&quot;:&quot;120px&quot;},&quot;length&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:124,&quot;tsType&quot;:&quot;number&quot;},&quot;ring&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:50,&quot;tsType&quot;:&quot;number&quot;},&quot;scale&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:3,&quot;tsType&quot;:&quot;number&quot;},&quot;dims&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;fill&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#7a4a2a&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;band&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#c59a4a&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2a2420&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;font&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;inherit&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;labelSize&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:12,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const L = +p.length || 124, R = +p.ring || 50, s = +p.scale || 2, dims = p.dims === true || p.dims === 'true';
+    const w = L * s, dia = R * 25.4 / 64, h = Math.max(dia * s, 5);
+    const fill = p.fill || '#7a4a2a', band = p.band || '#c59a4a', ink = p.ink || '#2a2420', font = p.font || 'inherit';
+    return {
+      dims,
+      box: { position: 'relative', width: w + 'px', height: (h + (dims ? 40 : 0)) + 'px', flex: 'none' },
+      body: { position: 'absolute', left: 0, top: 0, width: w + 'px', height: h + 'px', background: `linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 35%, rgba(0,0,0,.2)), ${fill}`, borderRadius: `${h * .14}px ${h / 2}px ${h / 2}px ${h * .14}px`, overflow: 'hidden' },
+      foot: { position: 'absolute', left: 0, top: 0, bottom: 0, width: Math.max(2, s * 1.2) + 'px', background: 'rgba(0,0,0,.18)' },
+      band: { position: 'absolute', top: 0, bottom: 0, left: (w * .78) + 'px', width: Math.max(w * .075, 6) + 'px', background: band, boxShadow: 'inset 1px 0 rgba(0,0,0,.18), inset -1px 0 rgba(0,0,0,.18)' },
+      line: { position: 'absolute', left: 0, top: (h + 10) + 'px', width: w + 'px', borderTop: `1px solid ${ink}` },
+      tickL: { position: 'absolute', left: 0, top: '-4px', height: '8px', borderLeft: `1px solid ${ink}` },
+      tickR: { position: 'absolute', right: 0, top: '-4px', height: '8px', borderLeft: `1px solid ${ink}` },
+      labels: { position: 'absolute', left: 0, top: (h + 17) + 'px', width: w + 'px', display: 'flex', justifyContent: 'space-between', gap: '8px', fontFamily: font, fontSize: (p.labelSize || 12) + 'px', color: ink, fontFeatureSettings: '"tnum"', whiteSpace: 'nowrap' },
+      lenText: L + ' mm',
+      ringText: 'Ringmass ' + R + ' · Ø ' + dia.toFixed(1) + ' mm'
+    };
+  }
+}
+</script>
+</body>
+</html>
