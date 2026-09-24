@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/classical-18991413-e23f-4783-9564-595ea8d73a93/styles.css">
+<script src="_ds/classical-18991413-e23f-4783-9564-595ea8d73a93/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<style>body{margin:0;background:#d6d1c9}a{color:#9e2b25}a:hover{color:#6f1d19}</style>
+</helmet>
+<div style="width:1830px;padding:64px 48px 96px;display:flex;flex-direction:column;gap:72px;font-family:var(--font-body);color:#1e1e1c;box-sizing:border-box">
+
+<div data-screen-label="F · 00 Konzept" style="background:#f2eee4;padding:64px;display:flex;flex-direction:column;gap:48px;border-top:6px double #2d4a6b">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:64px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:12px;position:relative">
+      <div style="font-family:'Courier Prime',monospace;font-size:14px;letter-spacing:.1em;color:#9e2b25">FINALES KONZEPT · DEPESCHE NR. 03</div>
+      <div style="font-family:var(--font-heading);font-size:120px;line-height:.9;font-weight:500;letter-spacing:-.02em">Die Depesche</div>
+      <div style="font-family:'Courier Prime',monospace;font-size:17px;color:#55524a">Berichte eines Korrespondenten aus den Tabakregionen.</div>
+      <div style="position:absolute;right:10px;top:-10px;transform:rotate(-8deg);border:2px solid #2d4a6b;outline:1px solid #2d4a6b;outline-offset:3px;padding:8px 14px;font-family:'Courier Prime',monospace;font-weight:700;font-size:14px;letter-spacing:.14em;color:#2d4a6b;text-align:center;line-height:1.3">ST. GALLEN<br>SEIT 2003</div>
+    </div>
+    <p style="font-size:18px;line-height:1.65;margin:0;text-align:justify;hyphens:auto">Die Depesche ordnet den ganzen Shop nach Herkunft: Jedes Land ist ein Bericht, jede Marke eine Notiz aus dem Feld. Schreibmaschinenschrift trägt Fakten, Koordinaten und Masse, die feine Antiqua trägt Namen und Geschichten. So wird die Navigation selbst zur Landkarte, und der Kunde reist, bevor er kauft. Aus El Lector übernimmt sie die Chronik und die Stimme José Martís: Kuba erscheint nicht nur als Herkunft, sondern als Geschichte, in der Tabak immer mehr war als eine Ware.</p>
+  </div>
+  <div style="height:1px;background:rgba(30,30,28,.2)"></div>
+  <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.1em;color:#9e2b25">PALETTE</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px"><sc-for list="{{ palette }}" as="c" hint-placeholder-count="8"><div style="display:flex;flex-direction:column;gap:6px"><div style="{{ c.sw }}"></div><div style="font-size:13px">{{ c.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:12px;color:#55524a">{{ c.hex }}</div></div></sc-for></div>
+      <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#55524a;line-height:1.5">Tinte auf Papier 15.2:1 · Farbband-Rot 6.6:1 · Stempelblau 8.4:1 · Bleistift #55524A 7.1:1</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.1em;color:#9e2b25">SCHRIFT</div>
+      <div style="font-family:var(--font-heading);font-size:54px;line-height:1;font-weight:500">Cormorant Garamond</div>
+      <div style="font-family:'Courier Prime',monospace;font-size:24px">Courier Prime 13°05′N</div>
+      <div style="font-size:20px;line-height:1.4">Lora für längere Berichte.</div>
+      <div style="font-size:14px;color:#55524a">Namen in Antiqua · Fakten, Masse, Koordinaten, Preise in Schreibmaschine</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.1em;color:#9e2b25">TEXTUR &amp; IKONEN</div>
+      <div style="height:64px;background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.14) 1px,transparent 1px);background-size:16px 16px;border:1px solid rgba(30,30,28,.2)"></div>
+      <div style="font-size:14px;line-height:1.5;color:#55524a">Millimeterpapier für Massstäbe, Karteikarten-Linien, Stempel mit Doppelrand. Sauber gedruckt, nicht gealtert.</div>
+      <div style="display:flex;gap:14px;align-items:center;font-family:'Courier Prime',monospace;font-size:22px;color:#2d4a6b"><span>→</span><span>↳</span><span>✕</span><span>§</span><span>№</span><span style="font-size:14px">+ Lucide für UI</span></div>
+    </div>
+  </div>
+  <div style="height:1px;background:rgba(30,30,28,.2)"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.1em;color:#9e2b25">FOTOGRAFIE</div>
+      <div style="height:180px;background:linear-gradient(170deg,#dfe3e0,#c9c3b2);border:8px solid #faf8f2;outline:1px solid rgba(30,30,28,.2);display:flex;align-items:flex-end;padding:12px;box-sizing:border-box;font-family:'Courier Prime',monospace;font-size:12px;color:#1e1e1c">Tabakfeld bei Estelí, Mittagslicht</div>
+      <div style="font-size:14px;line-height:1.5;color:#55524a">Reportage: Felder, Scheunen, Hände bei der Arbeit, Landschaft. Wie mit einer Leica unterwegs. Kühleres Licht, wahre Farben.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.1em;color:#9e2b25">KNÖPFE</div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:12px 22px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;box-shadow:3px 3px 0 #9e2b25">IN DEN WARENKORB</div>
+        <div style="border:1.5px solid #1e1e1c;padding:12px 22px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em">GANZE KISTE</div>
+        <div style="font-family:'Courier Prime',monospace;font-size:15px;color:#9e2b25;text-decoration:underline;text-underline-offset:4px">→ Bericht lesen</div>
+      </div>
+      <div style="font-size:14px;line-height:1.5;color:#55524a">Rechteckig wie Fahrkarten. Hauptaktion mit versetztem Schatten, sonst flach.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.1em;color:#9e2b25">KARTEN &amp; BAUSTEINE</div>
+      <div style="display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:start">
+        <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-top:3px solid #9e2b25;padding:14px 16px;display:flex;flex-direction:column;gap:8px;background-image:repeating-linear-gradient(180deg,transparent 0 23px,rgba(45,74,107,.12) 23px 24px)">
+          <div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a;display:flex;justify-content:space-between"><span>№ 0412</span><span>13°05′N 86°21′W</span></div>
+          <div style="font-family:var(--font-heading);font-size:26px;font-weight:600;line-height:1">Especial Gordo</div>
+          <div style="height:36px;display:flex;align-items:center"><dc-import name="Vitola" length="127" ring="56" scale="1.3" fill="#6b4a33" band="#9e2b25" hint-size="165px,29px"></dc-import></div>
+          <div style="font-family:'Courier Prime',monospace;font-size:12px">127 MM × 56 · ROBUSTO EXTRA</div>
+          <div style="font-family:'Courier Prime',monospace;font-size:16px;font-weight:700">ab CHF 11.90</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.5;color:#55524a">
+          <div><span style="color:#1e1e1c;font-weight:600">Fehlendes Foto:</span> Die Karteikarte trägt Nummer, Koordinaten und Silhouette. Ein Foto ist eine Beilage, keine Voraussetzung.</div>
+          <div style="display:flex;align-items:center;gap:8px;font-family:'Courier Prime',monospace;color:#1e1e1c"><span>STÄRKE</span><span style="letter-spacing:.2em">■■■□□</span></div>
+          <div style="transform:rotate(-3deg);align-self:flex-start;border:2px solid #9e2b25;padding:4px 10px;font-family:'Courier Prime',monospace;font-weight:700;font-size:12px;letter-spacing:.14em;color:#9e2b25">WENIGE AN LAGER</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;gap:64px;align-items:flex-start">
+  <div data-screen-label="F · 01 Altersabfrage Desktop" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Final · 01 Altersabfrage — Desktop</div>
+    <div style="width:1280px;height:760px;background:#f2eee4;position:relative;overflow:hidden;box-shadow:0 2px 12px rgba(30,30,28,.12);display:flex;align-items:center;justify-content:center">
+      <div style="width:620px;background:#faf8f2;border:1px solid rgba(30,30,28,.25);padding:44px 52px;display:flex;flex-direction:column;gap:20px;position:relative;box-shadow:0 1px 2px rgba(30,30,28,.1)">
+        <div style="display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:13px;color:#55524a;border-bottom:1px dashed rgba(30,30,28,.35);padding-bottom:12px"><span>DEPESCHE · ST. GALLEN</span><span>47°25′N 9°22′E</span></div>
+        <div style="font-family:var(--font-heading);font-size:52px;line-height:1;font-weight:500">Ein kurzer Halt an der Grenze.</div>
+        <div style="font-family:'Courier Prime',monospace;font-size:18px;line-height:1.55">Tabakwaren nur ab 18 Jahren. Sind Sie volljährig?</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px">
+          <div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:16px;font-family:'Courier Prime',monospace;font-weight:700;font-size:16px;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25">JA, 18 ODER ÄLTER</div>
+          <div style="border:1.5px solid #1e1e1c;padding:16px;font-family:'Courier Prime',monospace;font-weight:700;font-size:16px;letter-spacing:.08em;text-align:center">NEIN</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;font-size:14px;color:#55524a"><span style="width:16px;height:16px;border:1.5px solid #1e1e1c;box-sizing:border-box"></span>Auf diesem Gerät merken</div>
+        <div style="position:absolute;right:-24px;top:-28px;width:110px;height:110px;border-radius:50%;border:2px solid #2d4a6b;outline:1px solid #2d4a6b;outline-offset:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Courier Prime',monospace;font-weight:700;font-size:12px;letter-spacing:.1em;color:#2d4a6b;transform:rotate(12deg);line-height:1.3">18+<br>GEPRÜFT</div>
+      </div>
+    </div>
+  </div>
+  <div data-screen-label="F · 01 Altersabfrage Mobile" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Mobile 390</div>
+    <div style="width:390px;height:844px;background:#f2eee4;border-radius:36px;border:1px solid rgba(30,30,28,.2);overflow:hidden;display:flex;align-items:center;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="margin:0 18px;background:#faf8f2;border:1px solid rgba(30,30,28,.25);padding:30px 22px;display:flex;flex-direction:column;gap:18px;position:relative">
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#55524a;border-bottom:1px dashed rgba(30,30,28,.35);padding-bottom:10px">DEPESCHE · ST. GALLEN</div>
+        <div style="font-family:var(--font-heading);font-size:40px;line-height:1;font-weight:500">Ein kurzer Halt an der Grenze.</div>
+        <div style="font-family:'Courier Prime',monospace;font-size:16px;line-height:1.5">Tabakwaren nur ab 18 Jahren.</div>
+        <div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:16px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25">JA, 18 ODER ÄLTER</div>
+        <div style="border:1.5px solid #1e1e1c;padding:16px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-align:center">NEIN</div>
+        <div style="position:absolute;right:-8px;top:-30px;width:78px;height:78px;border-radius:50%;border:2px solid #2d4a6b;display:flex;align-items:center;justify-content:center;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;color:#2d4a6b;transform:rotate(12deg);background:#faf8f2">18+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;gap:64px;align-items:flex-start">
+  <div data-screen-label="F · 02 Startseite Desktop" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Final · 02 Startseite — Desktop</div>
+    <div style="width:1280px;background:#f2eee4;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 56px 14px"><div style="display:flex;gap:18px;align-items:baseline"><span style="font-family:var(--font-heading);font-size:34px;font-weight:600;white-space:nowrap">Havana Smokers Club</span><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#55524a;white-space:nowrap">Depeschen aus den Tabakregionen · St. Gallen, seit 2003</span></div><div style="display:flex;gap:22px;font-family:'Courier Prime',monospace;font-size:14px"><span>Suche</span><span>Konto</span><span style="color:#9e2b25">Korb [2]</span></div></div>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr) auto;border-top:1.5px solid #1e1e1c;border-bottom:1.5px solid #1e1e1c;margin:0 56px">
+        <sc-for list="{{ originsNav }}" as="o" hint-placeholder-count="7"><div style="{{ o.s }}"><div style="font-family:var(--font-heading);font-size:19px;font-weight:600;line-height:1.1">{{ o.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a">{{ o.c }}</div></div></sc-for>
+        <div style="padding:10px 0 10px 16px;display:flex;gap:16px;align-items:center;font-family:'Courier Prime',monospace;font-size:13px;border-left:1px solid rgba(30,30,28,.2)"><span>Humidore</span><span>Zubehör</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:56px 56px 48px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <div style="font-family:'Courier Prime',monospace;font-size:14px;color:#9e2b25">DEPESCHE NR. 41 · PINAR DEL RÍO · 22°25′N 83°41′W</div>
+          <div style="font-family:var(--font-heading);font-size:76px;line-height:.98;font-weight:500;letter-spacing:-.015em">Tabak aus Vuelta Abajo. Mehr braucht es nicht.</div>
+          <p style="margin:0;font-size:18px;line-height:1.65;max-width:500px">Sieben Herkunftsländer, rund 120 Marken. Wählen Sie eine Region, wir erzählen den Rest.</p>
+          <div style="display:flex;gap:14px"><div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:13px 22px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;box-shadow:3px 3px 0 #9e2b25">NACH HERKUNFT REISEN</div><div style="border:1.5px solid #1e1e1c;padding:13px 22px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em">BERATUNG</div></div>
+        </div>
+        <div style="position:relative">
+          <div style="width:560px;height:370px;position:relative;background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.18) 1px,transparent 1px);background-size:112px 92.5px;border:1px solid rgba(30,30,28,.3)">
+            <sc-for list="{{ mapBig }}" as="m" hint-placeholder-count="5"><div style="{{ m.dot }}"></div><div style="{{ m.lab }}"><div style="font-family:var(--font-heading);font-size:19px;font-weight:600;line-height:1">{{ m.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a">{{ m.c }}</div></div></sc-for>
+            <div style="position:absolute;left:8px;bottom:6px;font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a">90°W</div><div style="position:absolute;right:8px;bottom:6px;font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a">65°W</div><div style="position:absolute;right:8px;top:6px;font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a">25°N</div>
+          </div>
+          <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#55524a;margin-top:10px;display:flex;justify-content:space-between"><span>Karibik, Gradnetz 5° · Punkte nach realen Koordinaten</span><span>+ Afrika: Kamerun 4°N 11°E</span></div>
+        </div>
+      </div>
+      <div style="margin:0 56px;border-top:1px dashed rgba(30,30,28,.4)"></div>
+      <div style="display:grid;grid-template-columns:200px 1fr 440px;gap:40px;padding:48px 56px;align-items:center">
+        <div style="font-family:'Courier Prime',monospace;font-size:13px;line-height:1.6;color:#2d4a6b;font-style:italic">↳ Notiz: Der Robusto, an dem wir alle anderen messen. Seit Jahren ununterbrochen im Sortiment.</div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">AUS DEM FELD · EMPFEHLUNG</div>
+          <div style="font-family:var(--font-heading);font-size:50px;line-height:1;font-weight:500">Partagás Serie D No. 4</div>
+          <div style="font-family:'Courier Prime',monospace;font-size:14px">ROBUSTO · 124 MM × 50 · KUBA</div>
+          <div style="display:flex;gap:14px;align-items:baseline;font-family:'Courier Prime',monospace"><span style="font-size:28px;font-weight:700;white-space:nowrap">CHF 22.35</span><span style="text-decoration:line-through;color:#55524a;white-space:nowrap">CHF 24.10</span></div>
+        </div>
+        <div style="background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.12) 1px,transparent 1px);background-size:30px 30px;border:1px solid rgba(30,30,28,.25);padding:36px 24px;display:flex;justify-content:center"><dc-import name="Vitola" length="124" ring="50" scale="3" dims="true" fill="#6b4a33" band="#9e2b25" ink="#1e1e1c" font="'Courier Prime', monospace" hint-size="372px,70px"></dc-import></div>
+      </div>
+      <div style="padding:24px 56px 56px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid #1e1e1c;padding-bottom:10px"><div style="font-family:var(--font-heading);font-size:40px;font-weight:500;white-space:nowrap">Frisch eingetroffen</div><span style="font-family:'Courier Prime',monospace;font-size:14px;color:#9e2b25;text-decoration:underline;text-underline-offset:4px">→ Alle Eingänge</span></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+          <sc-for list="{{ arrivals }}" as="p" hint-placeholder-count="4">
+            <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-top:3px solid #9e2b25;padding:16px 18px;display:flex;flex-direction:column;gap:10px;background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(45,74,107,.1) 27px 28px)">
+              <div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a;display:flex;justify-content:space-between"><span>{{ p.no }}</span><span>{{ p.coord }}</span></div>
+              <sc-if value="{{ p.showPhoto }}" hint-placeholder-val="{{ false }}"><div style="height:130px;position:relative;overflow:hidden;background:#fff;border:5px solid #fff;outline:1px solid rgba(30,30,28,.2);transform:rotate(-1.2deg);box-shadow:0 1px 3px rgba(30,30,28,.15)"><img src="{{ p.img }}" alt="{{ p.name }}" style="{{ p.imgStyle }}"></div></sc-if>
+              <div style="font-family:'Courier Prime',monospace;font-size:12px">{{ p.brandU }}</div>
+              <div style="font-family:var(--font-heading);font-size:28px;font-weight:600;line-height:1">{{ p.name }}</div>
+              <sc-if value="{{ p.noPhoto }}" hint-placeholder-val="{{ true }}"><div style="height:56px;display:flex;align-items:center"><dc-import name="Vitola" length="{{ p.len }}" ring="{{ p.ring }}" scale="1.2" fill="#6b4a33" band="#9e2b25" hint-size="210px,27px"></dc-import></div></sc-if>
+              <div style="font-family:'Courier Prime',monospace;font-size:12px;line-height:1.5">{{ p.specU }}<br>STÄRKE {{ p.boxes }}</div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed rgba(30,30,28,.35);padding-top:8px;font-family:'Courier Prime',monospace"><span style="font-size:17px;font-weight:700;white-space:nowrap">{{ p.price }}</span><span style="font-size:11px;color:#2d4a6b">{{ p.stockU }}</span></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="background:#faf8f2;border-top:1px solid rgba(30,30,28,.3);border-bottom:1px solid rgba(30,30,28,.3);padding:40px 56px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">CHRONIK · TABAK UND KUBA</span><span style="font-family:'Courier Prime',monospace;font-size:12px;color:#2d4a6b;font-style:italic">↳ Jede Depesche beginnt irgendwo auf dieser Linie.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);position:relative">
+          <div style="position:absolute;left:0;right:0;top:6px;border-top:1px dashed rgba(30,30,28,.45)"></div>
+          <sc-for list="{{ chronicle }}" as="c" hint-placeholder-count="7"><div style="display:flex;flex-direction:column;gap:8px;padding-right:20px;position:relative"><span style="{{ c.dot }}"></span><div style="font-family:'Courier Prime',monospace;font-weight:700;font-size:16px;margin-top:12px">{{ c.y }}</div><div style="font-size:14px;line-height:1.5;color:#55524a">{{ c.t }}</div></div></sc-for>
+        </div>
+      </div>
+      <div style="background:#f2eee4;padding:48px 56px;display:grid;grid-template-columns:repeat(7,1fr);gap:0">
+        <sc-for list="{{ originsNav }}" as="o" hint-placeholder-count="7"><div style="padding:0 14px;border-left:1px solid rgba(30,30,28,.2);display:flex;flex-direction:column;gap:8px"><div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">{{ o.nr }}</div><div style="font-family:var(--font-heading);font-size:24px;font-weight:600;line-height:1.05">{{ o.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a">{{ o.c }}</div><div style="font-size:13px;line-height:1.45;color:#55524a">{{ o.t }}</div></div></sc-for>
+      </div>
+      <div style="background:#1e1e1c;color:#f2eee4;padding:72px 56px;display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center">
+        <div style="display:flex;flex-direction:column;gap:12px"><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#d9c9a3">DEPESCHE AUS KEY WEST UND TAMPA · 1891</div><p style="margin:0;font-size:17px;line-height:1.75;color:#e4ddcf;text-align:justify;hyphens:auto">Im Exil sprach José Martí in den Tabakfabriken zu den kubanischen Rollern. Sie finanzierten mit ihrem Lohn die Unabhängigkeit ihrer Insel. Tabak war in Kuba immer mehr als eine Ware.</p></div>
+        <div style="display:flex;flex-direction:column;gap:14px;border-left:1px solid rgba(242,238,228,.35);padding-left:44px"><div style="font-family:var(--font-heading);font-size:56px;line-height:1.05;font-style:italic">«Gebildet zu sein ist der einzige Weg, frei zu sein.»</div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#d9c9a3">JOSÉ MARTÍ · 1884</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:56px">
+        <div style="height:320px;background:linear-gradient(170deg,#dfe3e0,#c9c3b2);border:8px solid #faf8f2;outline:1px solid rgba(30,30,28,.2);position:relative;display:flex;align-items:flex-end;padding:14px;box-sizing:border-box;font-family:'Courier Prime',monospace;font-size:12px">Foto · Versandtisch in St. Gallen, Kisten mit Frachtzetteln<div style="position:absolute;right:20px;top:20px;transform:rotate(-7deg);border:2px solid #2d4a6b;outline:1px solid #2d4a6b;outline-offset:3px;padding:6px 12px;font-weight:700;font-size:13px;letter-spacing:.12em;color:#2d4a6b;background:rgba(250,248,242,.8)">ST. GALLEN · 2003</div></div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">ÜBER UNS</div>
+          <div style="font-family:var(--font-heading);font-size:46px;line-height:1.02;font-weight:500">Seit 2003. Aus St. Gallen.</div>
+          <p style="margin:0;font-size:17px;line-height:1.7;text-align:justify;hyphens:auto">Wir reisen nicht jedes Jahr nach Estelí. Aber wir kennen die Leute, die es tun, und wir probieren jede neue Kiste, bevor sie in den Shop kommt. Was nicht überzeugt, schicken wir zurück.</p>
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#2d4a6b;font-style:italic">↳ Beratung: Mo–Fr, am Telefon oder per E-Mail.</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:0 56px 48px">
+        <sc-for list="{{ trust }}" as="t" hint-placeholder-count="4"><div style="border:1.5px solid #2d4a6b;outline:1px solid #2d4a6b;outline-offset:3px;margin:4px;padding:14px 16px;color:#2d4a6b;display:flex;flex-direction:column;gap:4px"><div style="font-family:'Courier Prime',monospace;font-weight:700;font-size:14px;letter-spacing:.08em">{{ t.hU }}</div><div style="font-size:13px;line-height:1.45;color:#1e1e1c">{{ t.b }}</div></div></sc-for>
+      </div>
+      <div style="margin:0 56px 56px;border:1.5px solid #1e1e1c;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:#faf8f2">
+        <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">ABONNEMENT</div><div style="font-family:var(--font-heading);font-size:38px;font-weight:500;line-height:1.05">Die Depesche. Einmal im Monat, per Post ins Postfach.</div></div>
+        <div style="display:flex;gap:10px"><div style="flex:1;border-bottom:1.5px solid #1e1e1c;padding:12px 4px;font-family:'Courier Prime',monospace;font-size:15px;color:#55524a">ihre@adresse.ch</div><div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:12px 20px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;box-shadow:3px 3px 0 #9e2b25">ABONNIEREN</div></div>
+      </div>
+      <div style="border-top:1.5px solid #1e1e1c;padding:28px 56px;display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:13px;color:#55524a"><span>HAVANA SMOKERS CLUB · 9000 ST. GALLEN · 47°25′N 9°22′E</span><span>TWINT · POSTFINANCE · VISA · MASTERCARD · RECHNUNG · VORAUSKASSE</span></div>
+    </div>
+  </div>
+  <div data-screen-label="F · 02 Startseite Mobile" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Mobile 390</div>
+    <div style="width:390px;background:#f2eee4;border-radius:36px;border:1px solid rgba(30,30,28,.2);overflow:hidden;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="height:44px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 20px;font-family:'Courier Prime',monospace;font-size:13px"><span>Menü</span><span style="font-family:var(--font-heading);font-size:22px;font-weight:600">Havana Smokers Club</span><span style="color:#9e2b25">[2]</span></div>
+      <div style="display:flex;border-top:1.5px solid #1e1e1c;border-bottom:1.5px solid #1e1e1c;overflow:hidden;white-space:nowrap">
+        <sc-for list="{{ originsNav }}" as="o" hint-placeholder-count="4"><div style="padding:10px 14px;border-right:1px solid rgba(30,30,28,.2);flex:none"><div style="font-family:var(--font-heading);font-size:17px;font-weight:600">{{ o.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:10px;color:#55524a">{{ o.lat }}</div></div></sc-for>
+      </div>
+      <div style="padding:26px 20px;display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">DEPESCHE NR. 41 · 22°25′N 83°41′W</div>
+        <div style="font-family:var(--font-heading);font-size:44px;line-height:1;font-weight:500">Tabak aus Vuelta Abajo. Mehr braucht es nicht.</div>
+        <div style="width:350px;height:231px;position:relative;background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.18) 1px,transparent 1px);background-size:70px 57.75px;border:1px solid rgba(30,30,28,.3)"><sc-for list="{{ mapSmall }}" as="m" hint-placeholder-count="5"><div style="{{ m.dot }}"></div><div style="{{ m.lab }}"><div style="font-family:var(--font-heading);font-size:15px;font-weight:600;line-height:1">{{ m.n }}</div></div></sc-for></div>
+        <div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:15px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25">NACH HERKUNFT REISEN</div>
+      </div>
+      <div style="margin:0 20px;border-top:1px dashed rgba(30,30,28,.4)"></div>
+      <div style="padding:22px 20px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">AUS DEM FELD · EMPFEHLUNG</div>
+        <div style="font-family:var(--font-heading);font-size:32px;line-height:1;font-weight:500">Partagás Serie D No. 4</div>
+        <div style="background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.12) 1px,transparent 1px);background-size:20px 20px;border:1px solid rgba(30,30,28,.25);padding:22px 12px;display:flex;justify-content:center"><dc-import name="Vitola" length="124" ring="50" scale="2" dims="true" fill="#6b4a33" band="#9e2b25" ink="#1e1e1c" font="'Courier Prime', monospace" label-size="11" hint-size="248px,60px"></dc-import></div>
+        <div style="display:flex;gap:10px;align-items:baseline;font-family:'Courier Prime',monospace"><span style="font-size:22px;font-weight:700">CHF 22.35</span><span style="text-decoration:line-through;color:#55524a;font-size:14px">CHF 24.10</span></div>
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#2d4a6b;font-style:italic">↳ Der Robusto, an dem wir alle anderen messen.</div>
+      </div>
+      <div style="padding:10px 20px 24px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:var(--font-heading);font-size:30px;font-weight:500;border-bottom:1.5px solid #1e1e1c;padding-bottom:6px">Frisch eingetroffen</div>
+        <sc-for list="{{ arrivals }}" as="p" hint-placeholder-count="3"><div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-left:3px solid #9e2b25;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:6px;align-items:center"><div><div style="font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a">{{ p.no }} · {{ p.brandU }}</div><div style="font-family:var(--font-heading);font-size:22px;font-weight:600;line-height:1.05">{{ p.name }}</div><div style="margin-top:6px"><dc-import name="Vitola" length="{{ p.len }}" ring="{{ p.ring }}" scale=".9" fill="#6b4a33" band="#9e2b25" hint-size="160px,20px"></dc-import></div></div><div style="font-family:'Courier Prime',monospace;font-size:14px;font-weight:700;text-align:right">{{ p.price }}</div></div></sc-for>
+      </div>
+      <div style="background:#faf8f2;border-top:1px solid rgba(30,30,28,.3);border-bottom:1px solid rgba(30,30,28,.3);padding:20px;margin-bottom:24px"><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#9e2b25;margin-bottom:10px">CHRONIK</div><sc-for list="{{ chronicle }}" as="c" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:52px 1fr;gap:10px;padding:6px 0 6px 12px;border-left:1px dashed rgba(30,30,28,.45)"><span style="font-family:'Courier Prime',monospace;font-weight:700;font-size:14px">{{ c.y }}</span><span style="font-size:13px;color:#55524a;line-height:1.4">{{ c.t }}</span></div></sc-for></div>
+      <div style="background:#1e1e1c;color:#f2eee4;padding:28px 20px;margin-bottom:24px;display:flex;flex-direction:column;gap:10px"><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#d9c9a3">KEY WEST, 1891</div><div style="font-family:var(--font-heading);font-size:32px;line-height:1.05;font-style:italic">«Gebildet zu sein ist der einzige Weg, frei zu sein.»</div><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#d9c9a3">JOSÉ MARTÍ · 1884</div></div>
+      <div style="padding:0 20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px"><sc-for list="{{ trust }}" as="t" hint-placeholder-count="4"><div style="border:1.5px solid #2d4a6b;padding:10px;color:#2d4a6b;font-family:'Courier Prime',monospace;font-weight:700;font-size:12px;letter-spacing:.06em;line-height:1.3">{{ t.hU }}</div></sc-for></div>
+      <div style="margin:0 20px 36px;border:1.5px solid #1e1e1c;padding:20px;background:#faf8f2;display:flex;flex-direction:column;gap:12px"><div style="font-family:var(--font-heading);font-size:26px;font-weight:500;line-height:1.05">Die Depesche. Einmal im Monat.</div><div style="border-bottom:1.5px solid #1e1e1c;padding:10px 2px;font-family:'Courier Prime',monospace;color:#55524a">ihre@adresse.ch</div><div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:13px;font-family:'Courier Prime',monospace;font-weight:700;letter-spacing:.08em;text-align:center">ABONNIEREN</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;gap:64px;align-items:flex-start">
+  <div data-screen-label="F · 03 Marke Desktop" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Final · 03 Kategorie / Marke — Desktop</div>
+    <div style="width:1280px;background:#f2eee4;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 56px 14px"><span style="font-family:var(--font-heading);font-size:30px;font-weight:600;white-space:nowrap">Havana Smokers Club</span><div style="display:flex;gap:22px;font-family:'Courier Prime',monospace;font-size:14px"><span>Suche</span><span>Konto</span><span style="color:#9e2b25">Korb [2]</span></div></div>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr) auto;border-top:1.5px solid #1e1e1c;border-bottom:1.5px solid #1e1e1c;margin:0 56px">
+        <sc-for list="{{ originsNavNic }}" as="o" hint-placeholder-count="7"><div style="{{ o.s }}"><div style="font-family:var(--font-heading);font-size:19px;font-weight:600;line-height:1.1">{{ o.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a">{{ o.c }}</div></div></sc-for>
+        <div style="padding:10px 0 10px 16px;display:flex;gap:16px;align-items:center;font-family:'Courier Prime',monospace;font-size:13px;border-left:1px solid rgba(30,30,28,.2)"><span>Humidore</span><span>Zubehör</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:220px 680px 1fr;gap:40px;padding:48px 56px;border-bottom:1px dashed rgba(30,30,28,.4)">
+        <div style="font-family:'Courier Prime',monospace;font-size:13px;line-height:1.8;color:#55524a"><div style="color:#9e2b25">NICARAGUA / N° 23 von 35</div><div>ORT: Estelí</div><div>13°05′N 86°21′W</div><div>HÖHE: ca. 850 m</div><div>LINIEN: 2</div><div>VITOLAS: 6</div></div>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="font-family:var(--font-heading);font-size:96px;line-height:.9;font-weight:500">Nicarao</div>
+          <div style="font-family:'Courier Prime',monospace;font-size:17px;line-height:1.55">Benannt nach dem Kaziken, der dem Land seinen Namen gab.</div>
+          <p style="margin:0;font-size:17px;line-height:1.75;text-align:justify;hyphens:auto">Die Zigarren von Nicarao sind das Gegenteil von laut. Sie werden in Estelí gerollt, aus Tabaken, die drei Täler weit auseinander wachsen: Estelí, Jalapa, Condega. In der Kiste verbinden sie sich zu einem ruhigen Ganzen.</p>
+          <p style="margin:0;font-size:17px;line-height:1.75;text-align:justify;hyphens:auto">Die Especial-Linie ist mild bis mittel, cremig, mit Noten von Nuss und hellem Holz. Die Exclusivo-Linie ist dunkler, öliger, süsser, mit längerem Nachhall. Wer Kuba kennt, findet hier Vertrautes, aber keinen Ersatz.</p>
+          <p style="margin:0;font-size:17px;line-height:1.75;text-align:justify;hyphens:auto">Die Kisten ruhen bei uns mindestens drei Monate, bevor sie verkauft werden.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:28px;padding-top:120px;font-family:'Courier Prime',monospace;font-size:13px;line-height:1.6;color:#2d4a6b;font-style:italic">
+          <div>↳ Jalapa liegt nördlicher und kühler. Von dort kommen die feineren Deckblätter.</div>
+          <div>↳ Für den Einstieg: Especial Robusto. Für den Abend: Don Rafa.</div>
+          <div style="transform:rotate(-4deg);align-self:flex-start;border:2px solid #9e2b25;outline:1px solid #9e2b25;outline-offset:3px;padding:6px 12px;font-style:normal;font-weight:700;letter-spacing:.12em;color:#9e2b25">3 MONATE GELAGERT</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:230px 1fr;gap:40px;padding:36px 56px 56px">
+        <div style="font-family:'Courier Prime',monospace;font-size:13px;display:flex;flex-direction:column;gap:18px">
+          <div style="font-weight:700;letter-spacing:.08em;border-bottom:1.5px solid #1e1e1c;padding-bottom:8px">FILTER</div>
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6"><div style="display:flex;flex-direction:column;gap:6px"><div style="color:#9e2b25">{{ f.tU }}</div><sc-for list="{{ f.o }}" as="o" hint-placeholder-count="3"><div style="display:flex;gap:8px"><span>{{ o.mark }}</span><span>{{ o.l }}</span></div></sc-for></div></sc-for>
+          <div style="display:flex;flex-direction:column;gap:6px"><div style="color:#9e2b25">PREIS</div><div>CHF 8 ——●————●— 25</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:13px;color:#55524a;border-bottom:1px dashed rgba(30,30,28,.4);padding-bottom:10px"><span>6 EINTRÄGE · NICARAGUA / NICARAO / AN LAGER</span><span>SORTIERUNG: LÄNGE ↑</span></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+            <sc-for list="{{ grid }}" as="p" hint-placeholder-count="6">
+              <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-top:3px solid #9e2b25;padding:16px 18px;display:flex;flex-direction:column;gap:10px;background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(45,74,107,.1) 27px 28px)">
+                <div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a;display:flex;justify-content:space-between"><span>{{ p.no }}</span><span>{{ p.lineU }}</span></div>
+                <div style="font-family:var(--font-heading);font-size:30px;font-weight:600;line-height:1">{{ p.name }}</div>
+                <sc-if value="{{ p.showPhoto }}" hint-placeholder-val="{{ false }}"><div style="height:120px;background:linear-gradient(170deg,#dfe3e0,#c9c3b2);border:5px solid #fff;outline:1px solid rgba(30,30,28,.2);font-family:'Courier Prime',monospace;font-size:10px;padding:6px;display:flex;align-items:flex-end">Beilage: Foto</div></sc-if>
+                <sc-if value="{{ p.noPhoto }}" hint-placeholder-val="{{ true }}"><div style="height:56px;display:flex;align-items:center"><dc-import name="Vitola" length="{{ p.len }}" ring="{{ p.ring }}" scale="1.3" fill="#6b4a33" band="#9e2b25" hint-size="231px,29px"></dc-import></div></sc-if>
+                <div style="font-family:'Courier Prime',monospace;font-size:12px;line-height:1.5">{{ p.specU }}<br>STÄRKE {{ p.boxes }}</div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed rgba(30,30,28,.35);padding-top:8px;font-family:'Courier Prime',monospace"><span style="font-size:17px;font-weight:700;white-space:nowrap">{{ p.price }}</span><span style="font-size:11px;color:#2d4a6b">{{ p.stockU }}</span></div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-screen-label="F · 03 Marke Mobile" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Mobile 390</div>
+    <div style="width:390px;background:#f2eee4;border-radius:36px;border:1px solid rgba(30,30,28,.2);overflow:hidden;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="height:44px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 20px;font-family:'Courier Prime',monospace;font-size:13px;border-bottom:1.5px solid #1e1e1c"><span>‹ Nicaragua</span><span style="font-family:var(--font-heading);font-size:22px;font-weight:600">HSC</span><span style="color:#9e2b25">[2]</span></div>
+      <div style="padding:22px 20px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">N° 23 VON 35 · ESTELÍ · 13°05′N</div>
+        <div style="font-family:var(--font-heading);font-size:60px;line-height:.9;font-weight:500">Nicarao</div>
+        <p style="margin:0;font-size:15px;line-height:1.7;text-align:justify;hyphens:auto">Die Zigarren von Nicarao sind das Gegenteil von laut. Gerollt in Estelí, aus Tabaken dreier Täler.</p>
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#2d4a6b;font-style:italic;border-left:2px solid #2d4a6b;padding-left:10px">↳ Für den Einstieg: Especial Robusto. Für den Abend: Don Rafa.</div>
+      </div>
+      <div style="display:flex;gap:8px;padding:12px 20px;border-top:1px dashed rgba(30,30,28,.4);border-bottom:1px dashed rgba(30,30,28,.4);font-family:'Courier Prime',monospace;font-size:13px"><span style="border:1.5px solid #9e2b25;color:#9e2b25;padding:8px 12px">FILTER [3]</span><span style="border:1.5px solid #1e1e1c;padding:8px 12px">LÄNGE ↑</span><span style="border:1.5px solid #1e1e1c;padding:8px 12px">AN LAGER</span></div>
+      <div style="padding:16px 20px 32px;display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ grid }}" as="p" hint-placeholder-count="4"><div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-left:3px solid #9e2b25;padding:12px 14px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a"><span>{{ p.no }} · {{ p.lineU }}</span><span>{{ p.stockU }}</span></div><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:var(--font-heading);font-size:24px;font-weight:600">{{ p.name }}</span><span style="font-family:'Courier Prime',monospace;font-size:14px;font-weight:700">{{ p.price }}</span></div><dc-import name="Vitola" length="{{ p.len }}" ring="{{ p.ring }}" scale="1.1" fill="#6b4a33" band="#9e2b25" hint-size="196px,24px"></dc-import><div style="font-family:'Courier Prime',monospace;font-size:11px">{{ p.specU }}</div></div></sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;gap:64px;align-items:flex-start">
+  <div data-screen-label="F · 04 Produkt Desktop" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Final · 04 Produktdetail — Desktop</div>
+    <div style="width:1280px;background:#f2eee4;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 56px 14px"><span style="font-family:var(--font-heading);font-size:30px;font-weight:600;white-space:nowrap">Havana Smokers Club</span><div style="display:flex;gap:22px;font-family:'Courier Prime',monospace;font-size:14px"><span>Suche</span><span>Konto</span><span style="color:#9e2b25">Korb [2]</span></div></div>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr) auto;border-top:1.5px solid #1e1e1c;border-bottom:1.5px solid #1e1e1c;margin:0 56px">
+        <sc-for list="{{ originsNavCuba }}" as="o" hint-placeholder-count="7"><div style="{{ o.s }}"><div style="font-family:var(--font-heading);font-size:19px;font-weight:600;line-height:1.1">{{ o.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a">{{ o.c }}</div></div></sc-for>
+        <div style="padding:10px 0 10px 16px;display:flex;gap:16px;align-items:center;font-family:'Courier Prime',monospace;font-size:13px;border-left:1px solid rgba(30,30,28,.2)"><span>Humidore</span><span>Zubehör</span></div>
+      </div>
+      <div style="padding:18px 56px 0;font-family:'Courier Prime',monospace;font-size:13px;color:#55524a">KUBA / PINAR DEL RÍO / PARTAGÁS / SERIE D NO. 4</div>
+      <div style="display:grid;grid-template-columns:1fr 460px;gap:48px;padding:28px 56px 48px">
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="position:relative;background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.07) 1px,transparent 1px),linear-gradient(rgba(45,74,107,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.18) 1px,transparent 1px);background-size:4.4px 4.4px,4.4px 4.4px,44px 44px,44px 44px;border:1px solid rgba(30,30,28,.3);height:520px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:64px;box-sizing:border-box">
+            <div style="position:absolute;right:28px;top:26px;width:250px;background:#fff;padding:8px 8px 10px;box-shadow:0 2px 6px rgba(30,30,28,.18);transform:rotate(2.5deg)"><img src="uploads/334_gr_1.gif" alt="Partagás Serie D No. 4, Kiste à 25" style="width:100%;display:block"><div style="font-family:'Courier Prime',monospace;font-size:11px;margin-top:4px">Beilage · Kiste à 25</div><span style="position:absolute;left:50%;top:-10px;width:70px;height:20px;margin-left:-35px;background:rgba(214,203,170,.75);transform:rotate(-4deg)"></span></div>
+            <dc-import name="Vitola" length="124" ring="50" scale="4.4" dims="true" fill="#6b4a33" band="#9e2b25" ink="#1e1e1c" font="'Courier Prime', monospace" label-size="13" hint-size="546px,92px"></dc-import>
+            <div style="position:absolute;left:16px;top:14px;font-family:'Courier Prime',monospace;font-size:12px;color:#55524a">1 Kästchen = 1 cm · massstabsgetreu</div>
+            <div style="position:absolute;right:16px;bottom:14px;font-family:'Courier Prime',monospace;font-size:12px;color:#2d4a6b;font-style:italic">↳ Foto zeigt die Kiste, die Zeichnung das Mass.</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+            <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);padding:22px;display:flex;flex-direction:column;gap:10px;background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(45,74,107,.1) 27px 28px)"><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">FELDNOTIZ · DEGUSTATION</div><div style="font-family:'Courier Prime',monospace;font-size:15px;line-height:28px">Kalt: Heu, Zeder.<br>1/3 — Erde, Leder, leise Süsse.<br>2/3 — Kakao, Kaffee.<br>3/3 — Pfeffer, trocken, lang.<br>Dauer: ca. 45 Min.</div></div>
+            <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);padding:22px;display:flex;flex-direction:column;gap:10px;background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(45,74,107,.1) 27px 28px)"><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">FELDNOTIZ · DAZU</div><div style="font-family:'Courier Prime',monospace;font-size:15px;line-height:28px">→ Dunkler Rum, 8 Jahre, pur<br>→ Espresso, nach dem Essen<br>→ Oloroso, leicht gekühlt</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:160px 1fr;gap:20px;border-top:1px dashed rgba(30,30,28,.45);padding-top:14px"><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">CHRONIK DER MARKE</div><div style="display:grid;grid-template-columns:repeat(3,1fr);position:relative;font-size:14px;line-height:1.45;color:#55524a"><div style="position:absolute;left:0;right:0;top:6px;border-top:1px dashed rgba(30,30,28,.45)"></div><div style="position:relative;padding-top:18px;padding-right:12px"><span style="position:absolute;left:0;top:1px;width:11px;height:11px;border-radius:50%;background:#faf8f2;border:1.5px solid #2d4a6b"></span><b style="font-family:'Courier Prime',monospace;color:#1e1e1c">1845</b><br>Jaime Partagás gründet die Fabrik in Havanna.</div><div style="position:relative;padding-top:18px;padding-right:12px"><span style="position:absolute;left:0;top:1px;width:11px;height:11px;border-radius:50%;background:#faf8f2;border:1.5px solid #2d4a6b"></span><b style="font-family:'Courier Prime',monospace;color:#1e1e1c">Calle Industria</b><br>Die Fabrik hinter dem Capitolio.</div><div style="position:relative;padding-top:18px"><span style="position:absolute;left:0;top:1px;width:11px;height:11px;border-radius:50%;background:#9e2b25;border:1.5px solid #9e2b25"></span><b style="font-family:'Courier Prime',monospace;color:#1e1e1c">Heute</b><br>Serie D, die kräftige Linie des Hauses.</div></div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#9e2b25">PARTAGÁS · KUBA · 22°25′N 83°41′W</div>
+          <div style="font-family:var(--font-heading);font-size:62px;line-height:.95;font-weight:500">Serie D No. 4</div>
+          <div style="display:flex;align-items:baseline;gap:14px;font-family:'Courier Prime',monospace;border-top:1.5px solid #1e1e1c;padding-top:14px"><span style="font-size:38px;font-weight:700;white-space:nowrap">{{ pdpPrice }}</span><span style="color:#55524a;white-space:nowrap">statt <span style="text-decoration:line-through;white-space:nowrap">{{ pdpList }}</span></span></div>
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#55524a">{{ pdpUnit }} · inkl. MWST</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><sc-for list="{{ variants }}" as="v" hint-placeholder-count="2"><div onClick="{{ v.pick }}" style="{{ v.s }}"><div style="font-weight:700;letter-spacing:.06em">{{ v.t }}</div><div style="font-size:12px;margin-top:2px">{{ v.d }}</div></div></sc-for></div>
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;border:1px dashed rgba(30,30,28,.45);padding:10px 14px;line-height:1.8"><sc-for list="{{ tiers }}" as="t" hint-placeholder-count="3"><div style="display:flex;justify-content:space-between"><span>{{ t.q }}</span><span>{{ t.p }}</span></div></sc-for></div>
+          <div style="display:flex;gap:12px;align-items:center"><span style="transform:rotate(-3deg);border:2px solid #2d4a6b;padding:4px 10px;font-family:'Courier Prime',monospace;font-weight:700;font-size:12px;letter-spacing:.12em;color:#2d4a6b">AN LAGER</span><span style="font-family:'Courier Prime',monospace;font-size:13px">3 Kisten · 18 Stück · Versand morgen</span></div>
+          <div style="display:flex;gap:12px"><div style="border:1.5px solid #1e1e1c;padding:13px 16px;font-family:'Courier Prime',monospace;font-size:16px">− 1 +</div><div style="flex:1;border:1.5px solid #9e2b25;color:#9e2b25;padding:14px;font-family:'Courier Prime',monospace;font-weight:700;font-size:16px;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25">IN DEN WARENKORB</div></div>
+          <div style="margin-top:10px;border:1.5px solid #1e1e1c;background:#faf8f2">
+            <div style="padding:8px 14px;border-bottom:1.5px solid #1e1e1c;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;letter-spacing:.1em">FRACHTBRIEF · STECKBRIEF</div>
+            <sc-for list="{{ specs }}" as="s" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid rgba(30,30,28,.2);font-family:'Courier Prime',monospace;font-size:14px"><span style="padding:8px 14px;border-right:1px solid rgba(30,30,28,.2);color:#55524a">{{ s.kU }}</span><span style="padding:8px 14px">{{ s.v }}</span></div></sc-for>
+            <div style="display:grid;grid-template-columns:130px 1fr;font-family:'Courier Prime',monospace;font-size:14px"><span style="padding:8px 14px;border-right:1px solid rgba(30,30,28,.2);color:#55524a">STÄRKE</span><span style="padding:8px 14px;display:flex;gap:4px;align-items:center"><span style="width:16px;height:12px;background:#1e1e1c"></span><span style="width:16px;height:12px;background:#1e1e1c"></span><span style="width:16px;height:12px;background:#1e1e1c"></span><span style="width:16px;height:12px;background:#1e1e1c"></span><span style="width:16px;height:12px;border:1.5px solid #1e1e1c;box-sizing:border-box"></span><span style="margin-left:8px">4/5 mittel-kräftig</span></span></div>
+          </div>
+          <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#55524a">KÄUFERSCHUTZ BIS CHF 4'000 · BERATUNG · SEIT 2003</div>
+        </div>
+      </div>
+      <div style="padding:0 56px 56px">
+        <div style="font-family:var(--font-heading);font-size:36px;font-weight:500;border-bottom:1.5px solid #1e1e1c;padding-bottom:8px;margin-bottom:20px">Weitere Formate der Serie</div>
+        <div style="background-color:#faf8f2;background-image:linear-gradient(90deg,rgba(45,74,107,.14) 1px,transparent 1px);background-size:15px 100%;border:1px solid rgba(30,30,28,.25);padding:22px 24px;display:flex;flex-direction:column;gap:14px">
+          <sc-for list="{{ related }}" as="p" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:260px 1fr 140px;gap:20px;align-items:center"><dc-import name="Vitola" length="{{ p.len }}" ring="{{ p.ring }}" scale="1.5" fill="#6b4a33" band="#9e2b25" hint-size="234px,32px"></dc-import><div><span style="font-family:var(--font-heading);font-size:24px;font-weight:600">{{ p.name }}</span><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#55524a">  {{ p.specU }}</span></div><span style="font-family:'Courier Prime',monospace;font-weight:700;font-size:16px;text-align:right">{{ p.price }}</span></div></sc-for>
+          <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#2d4a6b;font-style:italic">↳ Gleicher Massstab. Linien alle 10 mm.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-screen-label="F · 04 Produkt Mobile" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Mobile 390</div>
+    <div style="width:390px;background:#f2eee4;border-radius:36px;border:1px solid rgba(30,30,28,.2);overflow:hidden;position:relative;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="height:44px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 20px;font-family:'Courier Prime',monospace;font-size:13px;border-bottom:1.5px solid #1e1e1c"><span>‹ Partagás</span><span style="font-family:var(--font-heading);font-size:22px;font-weight:600">HSC</span><span style="color:#9e2b25">[2]</span></div>
+      <div style="background-color:#faf8f2;background-image:linear-gradient(rgba(45,74,107,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(45,74,107,.16) 1px,transparent 1px);background-size:23px 23px;height:210px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(30,30,28,.3)"><dc-import name="Vitola" length="124" ring="50" scale="2.3" dims="true" fill="#6b4a33" band="#9e2b25" ink="#1e1e1c" font="'Courier Prime', monospace" label-size="11" hint-size="285px,64px"></dc-import></div>
+      <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">PARTAGÁS · KUBA · 22°25′N</div>
+        <div style="font-family:var(--font-heading);font-size:44px;line-height:.95;font-weight:500">Serie D No. 4</div>
+        <div style="display:flex;align-items:baseline;gap:10px;font-family:'Courier Prime',monospace"><span style="font-size:30px;font-weight:700;white-space:nowrap">{{ pdpPrice }}</span><span style="color:#55524a;font-size:13px;text-decoration:line-through;white-space:nowrap">{{ pdpList }}</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><sc-for list="{{ variants }}" as="v" hint-placeholder-count="2"><div onClick="{{ v.pick }}" style="{{ v.s }}"><div style="font-weight:700;letter-spacing:.06em">{{ v.t }}</div><div style="font-size:11px;margin-top:2px">{{ v.d }}</div></div></sc-for></div>
+        <div style="font-family:'Courier Prime',monospace;font-size:12px">AB 5 STK. CHF 21.90 · AB 10 STK. CHF 21.45</div>
+        <div style="display:flex;gap:10px;align-items:center"><span style="border:2px solid #2d4a6b;padding:3px 8px;font-family:'Courier Prime',monospace;font-weight:700;font-size:11px;letter-spacing:.12em;color:#2d4a6b">AN LAGER</span><span style="font-family:'Courier Prime',monospace;font-size:12px">Versand morgen</span></div>
+        <div style="border:1.5px solid #1e1e1c;background:#faf8f2;margin-top:6px"><div style="padding:7px 12px;border-bottom:1.5px solid #1e1e1c;font-family:'Courier Prime',monospace;font-weight:700;font-size:12px;letter-spacing:.1em">STECKBRIEF</div><sc-for list="{{ specs }}" as="s" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid rgba(30,30,28,.2);font-family:'Courier Prime',monospace;font-size:13px"><span style="padding:7px 12px;color:#55524a">{{ s.kU }}</span><span style="padding:7px 12px">{{ s.v }}</span></div></sc-for><div style="padding:7px 12px;font-family:'Courier Prime',monospace;font-size:13px">STÄRKE ■■■■□</div></div>
+        <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);padding:14px;background-image:repeating-linear-gradient(180deg,transparent 0 25px,rgba(45,74,107,.1) 25px 26px)"><div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">FELDNOTIZ</div><div style="font-family:'Courier Prime',monospace;font-size:14px;line-height:26px">Erde, Leder. Kakao, Kaffee.<br>Zum Ende Pfeffer. → Rum, Espresso.</div></div>
+        <div style="height:84px"></div>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;background:#faf8f2;border-top:1.5px solid #1e1e1c;padding:12px 20px 28px;display:flex;gap:10px;align-items:center"><span style="font-family:'Courier Prime',monospace;font-weight:700;font-size:18px;white-space:nowrap">{{ pdpPrice }}</span><div style="flex:1;border:1.5px solid #9e2b25;color:#9e2b25;padding:14px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25">IN DEN KORB</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;gap:64px;align-items:flex-start">
+  <div data-screen-label="F · 05 Kasse Desktop" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Final · 05 Warenkorb &amp; Kasse — Desktop</div>
+    <div style="width:1280px;background:#f2eee4;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 56px;border-bottom:1.5px solid #1e1e1c"><span style="font-family:var(--font-heading);font-size:30px;font-weight:600;white-space:nowrap">Havana Smokers Club</span><div style="display:flex;gap:10px;font-family:'Courier Prime',monospace;font-size:13px"><span style="color:#55524a">[✓] KORB</span><span>——</span><span style="color:#9e2b25;font-weight:700">[2] ALTER</span><span>——</span><span style="color:#55524a">[3] VERSAND</span><span>——</span><span style="color:#55524a">[4] ZAHLUNG</span></div><span style="font-family:'Courier Prime',monospace;font-size:12px;color:#55524a">SSL</span></div>
+      <div style="display:grid;grid-template-columns:1fr 420px;gap:48px;padding:48px 56px 64px">
+        <div style="display:flex;flex-direction:column;gap:32px">
+          <div style="font-family:var(--font-heading);font-size:52px;font-weight:500;line-height:1">Versandauftrag</div>
+          <div style="border:1.5px solid #1e1e1c;background:#faf8f2;position:relative">
+            <div style="padding:10px 18px;border-bottom:1.5px solid #1e1e1c;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;letter-spacing:.1em;display:flex;justify-content:space-between"><span>FELD 2 · ALTERSNACHWEIS</span><span style="color:#9e2b25">PFLICHT</span></div>
+            <div style="padding:22px 18px;display:flex;flex-direction:column;gap:16px">
+              <div style="font-size:15px;line-height:1.6;color:#55524a">Tabakwaren nur an Personen ab 18 Jahren. Bitte Geburtsdatum eintragen.</div>
+              <div style="display:flex;gap:10px;font-family:'Courier Prime',monospace;font-size:18px"><div style="border:1.5px solid #1e1e1c;padding:10px 14px;width:50px;text-align:center">14</div><div style="border:1.5px solid #1e1e1c;padding:10px 14px;width:50px;text-align:center">03</div><div style="border:1.5px solid #1e1e1c;padding:10px 14px;width:80px;text-align:center">1968</div></div>
+              <div style="display:flex;gap:10px;align-items:center;font-family:'Courier Prime',monospace;font-size:15px"><span style="font-weight:700">[✕]</span>Ich bestätige, dass ich mindestens 18 Jahre alt bin.</div>
+            </div>
+            <div style="position:absolute;right:28px;top:56px;transform:rotate(-10deg);border:2.5px solid #2d4a6b;outline:1px solid #2d4a6b;outline-offset:3px;padding:8px 14px;font-family:'Courier Prime',monospace;font-weight:700;font-size:15px;letter-spacing:.14em;color:#2d4a6b;text-align:center;line-height:1.25">VOLLJÄHRIG<br>BESTÄTIGT</div>
+          </div>
+          <div style="border:1.5px solid #1e1e1c;background:#faf8f2">
+            <div style="padding:10px 18px;border-bottom:1.5px solid #1e1e1c;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;letter-spacing:.1em">FELD 3 · VERSAND MIT DER SCHWEIZERISCHEN POST</div>
+            <sc-for list="{{ ship }}" as="s" hint-placeholder-count="3"><div style="{{ s.row }}"><span style="font-weight:700">{{ s.mark }}</span><div style="flex:1"><div>{{ s.t }}</div><div style="font-size:12px;color:#55524a">{{ s.d }}</div></div><span style="font-weight:700">{{ s.p }}</span></div></sc-for>
+          </div>
+          <div style="border:1.5px solid #1e1e1c;background:#faf8f2">
+            <div style="padding:10px 18px;border-bottom:1.5px solid #1e1e1c;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;letter-spacing:.1em">FELD 4 · ZAHLUNGSART</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr"><sc-for list="{{ pays }}" as="p" hint-placeholder-count="7"><div onClick="{{ p.pick }}" style="{{ p.row }}"><span style="font-weight:700">{{ p.mark }}</span><div style="flex:1"><div>{{ p.t }}</div><div style="font-size:12px;color:#55524a">{{ p.d }}</div></div></div></sc-for></div>
+          </div>
+        </div>
+        <div style="align-self:start;background:#faf8f2;border:1px solid rgba(30,30,28,.25);padding:24px;display:flex;flex-direction:column;gap:12px;font-family:'Courier Prime',monospace;font-size:14px;background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(45,74,107,.08) 27px 28px)">
+          <div style="font-weight:700;letter-spacing:.1em;border-bottom:1.5px solid #1e1e1c;padding-bottom:8px">INHALT DER SENDUNG</div>
+          <sc-for list="{{ cart }}" as="c" hint-placeholder-count="2"><div style="display:flex;flex-direction:column;gap:6px;padding-bottom:10px;border-bottom:1px dashed rgba(30,30,28,.35)"><dc-import name="Vitola" length="{{ c.len }}" ring="{{ c.ring }}" scale="1" fill="#6b4a33" band="#9e2b25" hint-size="127px,22px"></dc-import><div style="display:flex;justify-content:space-between"><span style="font-family:var(--font-heading);font-size:21px;font-weight:600">{{ c.brand }} {{ c.name }}</span></div><div style="display:flex;justify-content:space-between;color:#55524a"><span>{{ c.q }} × {{ c.v }}</span><span style="color:#1e1e1c">{{ c.price }}</span></div></div></sc-for>
+          <div style="display:flex;justify-content:space-between"><span>ZWISCHENSUMME</span><span>CHF 595.75</span></div>
+          <div style="display:flex;justify-content:space-between"><span>PORTO PRIORITY</span><span>CHF 9.00</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1.5px solid #1e1e1c;padding-top:10px"><span>TOTAL INKL. MWST</span><span style="font-size:24px;font-weight:700">CHF 604.75</span></div>
+          <div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:15px;font-weight:700;font-size:15px;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25;margin-top:6px">ZAHLUNGSPFLICHTIG BESTELLEN</div>
+          <div style="font-size:12px;color:#55524a">Käuferschutz bis CHF 4'000.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-screen-label="F · 05 Kasse Mobile" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Mobile 390 · Zahlung</div>
+    <div style="width:390px;background:#f2eee4;border-radius:36px;border:1px solid rgba(30,30,28,.2);overflow:hidden;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="height:44px"></div>
+      <div style="padding:10px 20px;display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:13px;border-bottom:1.5px solid #1e1e1c"><span>‹ Versand</span><span>[4] VON [4]</span></div>
+      <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;border:1px dashed rgba(30,30,28,.45);padding:10px 12px;font-family:'Courier Prime',monospace;font-size:12px"><span>[✓] 18+ · 14.03.1968</span><span style="border:2px solid #2d4a6b;color:#2d4a6b;padding:2px 6px;font-weight:700;transform:rotate(-4deg)">BESTÄTIGT</span></div>
+        <div style="font-family:var(--font-heading);font-size:34px;font-weight:500">Zahlungsart</div>
+        <div style="border:1.5px solid #1e1e1c;background:#faf8f2"><sc-for list="{{ pays }}" as="p" hint-placeholder-count="7"><div onClick="{{ p.pick }}" style="{{ p.row }}"><span style="font-weight:700">{{ p.mark }}</span><div style="flex:1"><div>{{ p.t }}</div><div style="font-size:11px;color:#55524a">{{ p.d }}</div></div></div></sc-for></div>
+      </div>
+      <div style="background:#faf8f2;border-top:1.5px solid #1e1e1c;padding:14px 20px 30px;display:flex;flex-direction:column;gap:10px;font-family:'Courier Prime',monospace"><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:13px">TOTAL · 2 POS.</span><span style="font-size:22px;font-weight:700">CHF 604.75</span></div><div style="border:1.5px solid #9e2b25;color:#9e2b25;padding:15px;font-weight:700;letter-spacing:.08em;text-align:center;box-shadow:3px 3px 0 #9e2b25">ZAHLUNGSPFLICHTIG BESTELLEN</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex;gap:64px;align-items:flex-start">
+  <div data-screen-label="F · 06 Depesche Desktop" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Final · 06 Redaktion: Depesche aus Estelí — Desktop</div>
+    <div style="width:1280px;background:#f2eee4;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:22px 56px 14px"><span style="font-family:var(--font-heading);font-size:30px;font-weight:600;white-space:nowrap">Havana Smokers Club</span><div style="display:flex;gap:22px;font-family:'Courier Prime',monospace;font-size:14px"><span>Suche</span><span>Konto</span><span style="color:#9e2b25">Korb [2]</span></div></div>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr) auto;border-top:1.5px solid #1e1e1c;border-bottom:1.5px solid #1e1e1c;margin:0 56px">
+        <sc-for list="{{ originsNavNic }}" as="o" hint-placeholder-count="7"><div style="{{ o.s }}"><div style="font-family:var(--font-heading);font-size:19px;font-weight:600;line-height:1.1">{{ o.n }}</div><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a">{{ o.c }}</div></div></sc-for>
+        <div style="padding:10px 0 10px 16px;display:flex;gap:16px;align-items:center;font-family:'Courier Prime',monospace;font-size:13px;border-left:1px solid rgba(30,30,28,.2)"><span>Humidore</span><span>Zubehör</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 440px;gap:56px;padding:56px 56px 40px;align-items:end">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="font-family:'Courier Prime',monospace;font-size:14px;color:#9e2b25">DEPESCHE NR. 42 · ESTELÍ, NICARAGUA · 13°05′N 86°21′W</div>
+          <div style="font-family:var(--font-heading);font-size:88px;line-height:.95;font-weight:500;letter-spacing:-.015em">Zigarren aus Nicaragua</div>
+          <div style="font-family:'Courier Prime',monospace;font-size:17px;line-height:1.55;color:#55524a">Vulkanerde, drei Täler, eine junge Tradition. Ein Bericht in fünf Absätzen.</div>
+        </div>
+        <div style="background:#faf8f2;border:1px solid rgba(30,30,28,.25);padding:16px;font-family:'Courier Prime',monospace;font-size:13px;line-height:1.9"><div style="color:#9e2b25;font-weight:700;border-bottom:1px dashed rgba(30,30,28,.35);margin-bottom:6px">REGIONEN</div><div style="display:flex;justify-content:space-between"><span>Estelí</span><span>13°05′N 86°21′W</span></div><div style="display:flex;justify-content:space-between"><span>Jalapa</span><span>13°55′N 86°07′W</span></div><div style="display:flex;justify-content:space-between"><span>Condega</span><span>13°22′N 86°24′W</span></div><div style="display:flex;justify-content:space-between"><span>Ometepe</span><span>11°30′N 85°35′W</span></div></div>
+      </div>
+      <div style="margin:0 56px;height:420px;background:linear-gradient(170deg,#dfe3e0,#c4bda9);border:10px solid #faf8f2;outline:1px solid rgba(30,30,28,.2);display:flex;align-items:flex-end;padding:16px;box-sizing:border-box;font-family:'Courier Prime',monospace;font-size:12px;position:relative">Foto · Trockenscheune bei Estelí, Blätter an Stangen, Seitenlicht durch die Latten<div style="position:absolute;right:28px;top:24px;transform:rotate(6deg);width:96px;height:96px;border-radius:50%;border:2px solid #9e2b25;outline:1px solid #9e2b25;outline-offset:3px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:12px;letter-spacing:.08em;color:#9e2b25;line-height:1.3;background:rgba(250,248,242,.75)">ESTELÍ<br>NIC</div></div>
+      <div style="display:grid;grid-template-columns:220px 640px 1fr;gap:40px;padding:56px">
+        <div style="font-family:'Courier Prime',monospace;font-size:13px;line-height:1.7;color:#55524a"><div>VON: Redaktion HSC</div><div>LESEZEIT: 7 Min.</div><div>STAND: Sept. 2026</div></div>
+        <div style="display:flex;flex-direction:column;gap:18px;font-size:18px;line-height:1.75;text-align:justify;hyphens:auto">
+          <p style="margin:0"><span style="font-family:'Courier Prime',monospace;font-weight:700;color:#9e2b25">ESTELÍ. — </span>Nicaragua raucht man anders. Die Böden im Norden sind vulkanisch, schwarz und schwer. Der Tabak, der darauf wächst, wird kräftig und süss zugleich.</p>
+          <p style="margin:0">Estelí ist das Zentrum, mit Dutzenden Fabriken an staubigen Strassen. Jalapa, weiter nördlich und kühler, liefert die feineren Deckblätter. Condega liegt dazwischen und gibt die Würze.</p>
+          <div style="font-family:var(--font-heading);font-size:36px;line-height:1.15;font-weight:500;text-align:left;border-left:3px solid #9e2b25;padding-left:20px">Kräftig ist nicht dasselbe wie laut.</div>
+          <p style="margin:0">Viele Rollerfamilien kamen aus Kuba. Sie brachten Handwerk und Geduld mit und fanden einen Boden, der beides belohnt. Heute führen wir rund 35 Marken aus Nicaragua.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:28px;padding-top:90px;font-family:'Courier Prime',monospace;font-size:13px;line-height:1.6;color:#2d4a6b;font-style:italic"><div>↳ Estelí liegt auf rund 850 m. Die Nächte sind kühl, das hilft dem Blatt.</div><div>↳ Zum Probieren: Nicarao Especial Gordo, ab CHF 11.90.</div></div>
+      </div>
+      <div style="padding:0 56px 56px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid #1e1e1c;padding-bottom:8px;margin-bottom:20px"><div style="font-family:var(--font-heading);font-size:36px;font-weight:500">Beigelegt: drei Zigarren aus Estelí</div><span style="font-family:'Courier Prime',monospace;font-size:14px;color:#9e2b25;text-decoration:underline;text-underline-offset:4px">→ Alle 35 Marken</span></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px"><sc-for list="{{ enclosed }}" as="p" hint-placeholder-count="3"><div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-top:3px solid #9e2b25;padding:16px 18px;display:flex;flex-direction:column;gap:8px"><div style="font-family:'Courier Prime',monospace;font-size:11px;color:#55524a">{{ p.no }} · {{ p.brandU }}</div><div style="font-family:var(--font-heading);font-size:28px;font-weight:600;line-height:1">{{ p.name }}</div><dc-import name="Vitola" length="{{ p.len }}" ring="{{ p.ring }}" scale="1.3" fill="#6b4a33" band="#9e2b25" hint-size="231px,29px"></dc-import><div style="display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:13px"><span>{{ p.specU }}</span><span style="font-weight:700">{{ p.price }}</span></div></div></sc-for></div>
+      </div>
+    </div>
+  </div>
+  <div data-screen-label="F · 06 Depesche Mobile" style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a433c">Mobile 390</div>
+    <div style="width:390px;background:#f2eee4;border-radius:36px;border:1px solid rgba(30,30,28,.2);overflow:hidden;box-shadow:0 2px 12px rgba(30,30,28,.12)">
+      <div style="height:44px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 20px;font-family:'Courier Prime',monospace;font-size:13px;border-bottom:1.5px solid #1e1e1c"><span>Menü</span><span style="font-family:var(--font-heading);font-size:22px;font-weight:600">Havana Smokers Club</span><span style="color:#9e2b25">[2]</span></div>
+      <div style="padding:24px 20px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#9e2b25">DEPESCHE NR. 42 · 13°05′N 86°21′W</div>
+        <div style="font-family:var(--font-heading);font-size:48px;line-height:.95;font-weight:500">Zigarren aus Nicaragua</div>
+        <div style="height:220px;background:linear-gradient(170deg,#dfe3e0,#c4bda9);border:6px solid #faf8f2;outline:1px solid rgba(30,30,28,.2)"></div>
+        <p style="margin:0;font-size:16px;line-height:1.75;text-align:justify;hyphens:auto"><span style="font-family:'Courier Prime',monospace;font-weight:700;color:#9e2b25">ESTELÍ. — </span>Nicaragua raucht man anders. Die Böden im Norden sind vulkanisch, schwarz und schwer.</p>
+        <div style="font-family:'Courier Prime',monospace;font-size:12px;color:#2d4a6b;font-style:italic;border-left:2px solid #2d4a6b;padding-left:10px">↳ Estelí liegt auf rund 850 m. Die Nächte sind kühl, das hilft dem Blatt.</div>
+        <div style="font-family:var(--font-heading);font-size:28px;line-height:1.15;font-weight:500;border-left:3px solid #9e2b25;padding-left:14px">Kräftig ist nicht dasselbe wie laut.</div>
+        <div style="font-family:var(--font-heading);font-size:26px;font-weight:500;border-bottom:1.5px solid #1e1e1c;padding-bottom:6px;margin-top:10px">Beigelegt</div>
+        <sc-for list="{{ enclosed }}" as="p" hint-placeholder-count="3"><div style="background:#faf8f2;border:1px solid rgba(30,30,28,.2);border-left:3px solid #9e2b25;padding:12px 14px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-family:'Courier Prime',monospace;font-size:10.5px;color:#55524a">{{ p.brandU }}</div><div style="font-family:var(--font-heading);font-size:22px;font-weight:600">{{ p.name }}</div></div><span style="font-family:'Courier Prime',monospace;font-weight:700;font-size:14px">{{ p.price }}</span></div></sc-for>
+        <div style="height:12px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;photos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { box: false, pay: 0 };
+  renderVals() {
+    const R = '#9e2b25', INK = '#1e1e1c', photos = this.props.photos !== false;
+    const imgS = o => o.kind === 'box' ? { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' } : { position: 'absolute', left: 0, top: '50%', width: '150%', transform: 'translateY(-50%)', mixBlendMode: 'multiply' };
+    const U = s => s.toUpperCase();
+    let n = 400;
+    const mk = o => ({ ...o, no: '№ 0' + (++n), brandU: U(o.brand || 'Nicarao'), lineU: U(o.line || ''), stockU: U(o.stock || 'An Lager'), specU: U(o.format) + ' · ' + o.len + ' × ' + o.ring,
+      boxes: '■'.repeat(o.str) + '□'.repeat(5 - o.str), showPhoto: photos && !!o.img, noPhoto: !(photos && o.img), imgStyle: imgS(o) });
+    const arrivals = [
+      { brand: 'Nicarao', coord: '13°05′N', name: 'Especial Gordo', format: 'Robusto Extra', len: 127, ring: 56, str: 3, price: 'ab CHF 11.90', ph: 1 },
+      { brand: 'Perla Del Mar', coord: '13°05′N', name: 'Corojo', format: 'Robusto', len: 127, ring: 50, str: 3, price: 'ab CHF 11.00', img: 'uploads/4762_gr.gif' },
+      { brand: 'Camacho', coord: '14°02′N', name: 'Broadleaf', format: 'Robusto', len: 127, ring: 50, str: 5, price: 'ab CHF 8.80', stock: 'Wenige' },
+      { brand: 'Rocky Patel', coord: '13°05′N', name: 'Fifty-Five', format: 'Robusto', len: 140, ring: 55, str: 4, price: 'ab CHF 14.50', img: 'uploads/5401_gr.gif' }
+    ].map(mk);
+    const grid = [
+      { line: 'Especial', name: 'Petit Corona', format: 'Petit Corona', len: 129, ring: 42, str: 2, price: 'ab CHF 8.60' },
+      { line: 'Especial', name: 'Robusto', format: 'Robusto', len: 124, ring: 50, str: 2, price: 'ab CHF 9.90', ph: 1 },
+      { line: 'Especial', name: 'Gordo', format: 'Robusto Extra', len: 127, ring: 56, str: 3, price: 'ab CHF 11.90' },
+      { line: 'Especial', name: 'Toro', format: 'Toro', len: 152, ring: 52, str: 3, price: 'ab CHF 12.40' },
+      { line: 'Exclusivo', name: 'Torpedo', format: 'Torpedo', len: 156, ring: 52, str: 4, price: 'ab CHF 18.50', stock: 'Wenige', ph: 1 },
+      { line: 'Exclusivo', name: 'Don Rafa', format: 'Churchill Extra', len: 178, ring: 54, str: 4, price: 'ab CHF 20.90' }
+    ].map(mk);
+    const related = [
+      { name: 'Serie D No. 6', format: 'Petit Robusto', len: 90, ring: 50, str: 4, price: 'CHF 14.20' },
+      { name: 'Serie D No. 5', format: 'Petit Robusto', len: 110, ring: 50, str: 4, price: 'CHF 17.80' },
+      { name: 'Serie E No. 2', format: 'Duke', len: 140, ring: 54, str: 4, price: 'CHF 25.60' },
+      { name: 'Serie P No. 2', format: 'Pirámide', len: 156, ring: 52, str: 4, price: 'CHF 24.90' }
+    ].map(mk);
+    const enclosed = [arrivals[0], arrivals[1], arrivals[3]];
+    const O = [['Kuba', '22°N 83°W', '22°N', 'Vuelta Abajo. Der Massstab, an dem sich alle messen.'], ['Nicaragua', '13°N 86°W', '13°N', 'Vulkanerde. Kräftig und süss.'], ['Dom. Rep.', '19°N 70°W', '19°N', 'Cibao-Tal. Elegant, oft mild.'], ['Honduras', '14°N 86°W', '14°N', 'Danlí. Erdig, würzig, kräftig.'], ['Costa Rica', '10°N 84°W', '10°N', 'Zentraltal. Klein, sorgfältig.'], ['Afrika', '4°N 11°E', '4°N', 'Kamerun. Berühmt für Deckblätter.'], ['No Name', 'Karibik', '—', 'Ohne Band. Gute Tabake, ehrlicher Preis.']];
+    const nav = act => O.map(([n, c, lat, t], i) => ({ n, c, lat, t, nr: 'DEPESCHE ' + String(i + 1).padStart(2, '0'), s: { padding: '10px 12px', borderLeft: i ? '1px solid rgba(30,30,28,.2)' : 'none', background: i === act ? '#faf8f2' : 'transparent', boxShadow: i === act ? 'inset 0 -3px 0 ' + R : 'none' } }));
+    const pts = [['Kuba', '22°25′N 83°41′W', 22.42, -83.69, 'r'], ['Dom. Rep.', '19°27′N 70°42′W', 19.45, -70.7, 'l'], ['Honduras', '14°02′N 86°35′W', 14.03, -86.58, 'l'], ['Nicaragua', '13°05′N 86°21′W', 13.09, -86.35, 'r'], ['Costa Rica', '9°56′N 84°05′W', 9.93, -84.08, 'r']];
+    const map = (W, H, big) => pts.map(([nm, c, lat, lon, side]) => { const x = (lon + 90) / 25 * W, y = (25 - lat) / 20 * H; return { n: nm, c: big ? c : '', dot: { position: 'absolute', left: x - 5, top: y - 5, width: 10, height: 10, borderRadius: '50%', background: R, boxShadow: '0 0 0 3px rgba(158,43,37,.18)' }, lab: { position: 'absolute', top: y - (big ? 9 : 8), ...(side === 'r' ? { left: x + 12 } : { right: W - x + 12, textAlign: 'right' }), whiteSpace: 'nowrap' } }; });
+    const trust = [{ hU: 'SEIT 2003', b: 'Über zwanzig Jahre aus St. Gallen.' }, { hU: 'PERSÖNLICHE BERATUNG', b: 'Von Menschen, die selbst rauchen.' }, { hU: 'SCHNELL MIT DER POST', b: 'Bis 15 Uhr bestellt, morgen da.' }, { hU: "KÄUFERSCHUTZ CHF 4'000", b: 'Von der Kasse bis zur Tür.' }];
+    const filters = [['Herkunft', [['Nicaragua', 1], ['Kuba', 0], ['Honduras', 0]]], ['Marke', [['Nicarao', 1], ['Oliva', 0], ['Tatuaje', 0]]], ['Format', [['Robusto', 0], ['Churchill', 0], ['Toro', 0]]], ['Ringmass', [['bis 46', 0], ['48–52', 0], ['ab 54', 0]]], ['Länge', [['< 120 mm', 0], ['120–150 mm', 0], ['> 150 mm', 0]]], ['Stärke', [['■□□ mild', 0], ['■■□ mittel', 0], ['■■■ kräftig', 0]]], ['Lager', [['nur an Lager', 1]]]].map(([t, o]) => ({ tU: U(t), o: o.map(([l, on]) => ({ l, mark: on ? '[✕]' : '[ ]' })) }));
+    const b = this.state.box;
+    const variants = [{ t: 'EINZELN', d: 'CHF 22.35 / Stk.', on: !b, k: false }, { t: 'KISTE À 25', d: 'CHF 536.25', on: b, k: true }].map(v => ({ ...v, pick: () => this.setState({ box: v.k }), s: { cursor: 'pointer', padding: '11px 14px', fontFamily: "'Courier Prime', monospace", fontSize: 14, border: '1.5px solid ' + (v.on ? R : INK), color: v.on ? R : INK, background: v.on ? 'rgba(158,43,37,.06)' : 'transparent', boxShadow: v.on ? '3px 3px 0 ' + R : 'none' } }));
+    const tiers = [{ q: '1–4 Stück', p: 'CHF 22.35' }, { q: 'ab 5 Stück', p: 'CHF 21.90' }, { q: 'ab 10 Stück', p: 'CHF 21.45' }];
+    const specs = [['Format', 'Robusto'], ['Länge', '124 mm'], ['Ringmass', '50 · Ø 19.8 mm'], ['Herkunft', 'Kuba, Vuelta Abajo'], ['Deckblatt', 'Kuba, Colorado'], ['Kiste', '25 Stück']].map(([k, v]) => ({ kU: U(k), v }));
+    const cart = [{ brand: 'Partagás', name: 'Serie D No. 4', v: 'Kiste à 25', q: 1, price: 'CHF 536.25', len: 124, ring: 50 }, { brand: 'Nicarao', name: 'Especial Gordo', v: 'Einzeln', q: 5, price: 'CHF 59.50', len: 127, ring: 56 }];
+    const row = on => ({ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 18px', cursor: 'pointer', fontFamily: "'Courier Prime', monospace", fontSize: 14, borderBottom: '1px solid rgba(30,30,28,.15)', color: on ? R : INK, background: on ? 'rgba(158,43,37,.05)' : 'transparent' });
+    const ship = [['PostPac Priority', 'Morgen, bei Bestellung bis 15 Uhr', 'CHF 9.00', 1], ['PostPac Economy', '2–3 Werktage', 'CHF 7.00', 0], ['Abholung St. Gallen', 'Nach Vereinbarung', 'CHF 0.00', 0]].map(([t, d, p, on]) => ({ t, d, p, mark: on ? '(●)' : '( )', row: row(on) }));
+    const pays = [['TWINT', 'Direkt in der App'], ['PostFinance Card', 'Debitkarte'], ['PostFinance E-Finance', 'Im E-Banking'], ['Visa', 'Kreditkarte'], ['Mastercard', 'Kreditkarte'], ['Rechnung', 'Innert 30 Tagen'], ['Vorauskasse', 'Versand nach Eingang']].map(([t, d], i) => { const on = i === this.state.pay; return { t, d, mark: on ? '(●)' : '( )', pick: () => this.setState({ pay: i }), row: row(on) }; });
+    const palette = [['Papier', '#F2EEE4'], ['Karteikarte', '#FAF8F2'], ['Tinte', '#1E1E1C'], ['Bleistift', '#55524A'], ['Farbband-Rot', '#9E2B25'], ['Stempelblau', '#2D4A6B'], ['Khaki', '#8C7B55'], ['Tabak', '#6B4A33']].map(([n, hex]) => ({ n, hex, sw: { height: 64, background: hex, border: '1px solid rgba(30,30,28,.2)' } }));
+    const chronicle = [['1492', 'Die Spanier sehen auf Kuba zum ersten Mal Menschen rauchen.'], ['1845', 'Jaime Partagás gründet seine Fabrik in Havanna.'], ['1865', 'Der erste Lector liest in einer Fabrik in Havanna vor.'], ['1875', 'Romeo y Julieta, benannt nach Shakespeare.'], ['1891', 'José Martí spricht zu den Rollern in Key West und Tampa.'], ['1935', 'Montecristo, benannt nach dem Roman von Dumas.'], ['2003', 'Havana Smokers Club öffnet in St. Gallen.']].map(([y, t], i) => ({ y, t, dot: { position: 'absolute', left: 0, top: 0, width: 13, height: 13, boxSizing: 'border-box', borderRadius: '50%', background: i === 6 ? '#9e2b25' : '#faf8f2', border: '1.5px solid ' + (i === 6 ? '#9e2b25' : '#2d4a6b') } }));
+    return { chronicle, arrivals, grid, related, enclosed, trust, filters, variants, tiers, specs, cart, ship, pays, palette,
+      originsNav: nav(-1), originsNavNic: nav(1), originsNavCuba: nav(0), mapBig: map(560, 370, true), mapSmall: map(350, 231, false),
+      pdpPrice: b ? 'CHF 536.25' : 'CHF 22.35', pdpList: b ? 'CHF 602.50' : 'CHF 24.10', pdpUnit: b ? 'Kiste à 25' : 'Pro Stück' };
+  }
+}
+</script>
+</body>
+</html>
